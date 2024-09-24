@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodaya Wolfson - Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --text-color: #d4d4d4;
+            --highlight-color: #569cd6;
+            --secondary-color: #9cdcfe;
+            --accent-color: #ce9178;
+            --pink-color: #e962a5;
+            --purple-color: #c586c0;
+        }
+
+        body {
+            font-family: 'Consolas', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1,
+        h2 {
+            color: var(--highlight-color);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            padding: 1rem;
+            border-left: 3px solid var(--purple-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .section:hover {
+            border-color: var(--pink-color);
+        }
+
+        .keyword {
+            color: var(--purple-color);
+        }
+
+        .property {
+            color: var(--secondary-color);
+        }
+
+        .string {
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            max-width: 600px;
+        }
+
+        .contact-info a {
+            color: var(--pink-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--highlight-color);
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5em;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--pink-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .typing::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .highlight {
+            background-color: rgba(255, 105, 180, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .highlight:hover {
+            background-color: rgba(255, 105, 180, 0.2);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(43, 42, 42, 0.9);
+            padding: 1rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--pink-color);
+        }
+
+        /* Back to Top Button Styles */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--purple-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--pink-color);
+        }
+
+        /* Adjust container top margin to account for fixed navbar */
+        .container {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
+    </nav>
+
+    <div class="container">
+        <header id="home" class="section">
+            <h1 class="typing">Hodaya Wolfson - Full Stack Developer</h1>
+            <div class="contact-info">
+                <a href="mailto:hodaya31910@gmail.com">📧 hodaya31910@gmail.com</a>
+                <span>📞 058-321-0657</span>
+                <a href="https://www.linkedin.com/in/hodayawolfson/" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section id="experience" class="section highlight">
+            <h2><span class="keyword">const</span> <span class="property">workExperience</span> <span
+                    class="keyword">=</span> {</h2>
+            <ul>
+                <li>
+                    <span class="property">position:</span> <span class="string">"FullStack Developer"</span>,
+                    <span class="property">company:</span> <span class="string">"Smarti HR"</span>,
+                    <span class="property">period:</span> <span class="string">"2021 - 08.2024"</span>
+                </li>
+            </ul>
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Developed end-to-end features for TurboPay and myHr</li>
+                <li>Created an application for invoice generation and business expense management</li>
+                <li>Worked with TypeScript, HTML, CSS, Angular 15, Bootstrap, Cordova, PHP Laravel, MySQL, Docker</li>
+                <li>Managed code with Bitbucket and handled tasks using Jira</li>
+            </ul>
+            <h2>};</h2>
+
+        </section>
+
+        <section id="education" class="section highlight">
+            <h2><span class="keyword">const</span> <span class="property">education</span> <span
+                    class="keyword">=</span> [</h2>
+            <ul>
+                <li><span class="string">"Full Stack Development Course | Atra | 2020-2021"</span>,</li>
+                <li><span class="string">"Software Engineering | Navat Israel Seminary | 2018-2020"</span>,</li>
+                <li><span class="string">"High School Diploma in Business Management | Beit Bina | 2014-2018"</span>
+                </li>
+            </ul>
+            <h2>];</h2>
+        </section>
+
+        <section id="projects" class="section highlight">
+            <h2><span class="keyword">const</span> <span class="property">projects</span> <span class="keyword">=</span>
+                {</h2>
+            <p><span class="property">name:</span> <span class="string">"Queue Management System"</span>,</p>
+            <p><span class="property">description:</span> <span class="string">"Developed a recursive scheduling
+                    algorithm based on constraints and real-time queue management."</span>,</p>
+            <p><span class="property">technologies:</span> [</p>
+            <ul>
+                <li><span class="string">"Backend: .NET Web API"</span>,</li>
+                <li><span class="string">"Server-side: C#"</span>,</li>
+                <li><span class="string">"Client-side: Angular 8"</span>,</li>
+                <li><span class="string">"Database: SQL Server"</span></li>
+            </ul>
+            <p>]</p>
+            <h2>};</h2>
+        </section>
+
+        <section id="skills" class="section highlight">
+            <h2><span class="keyword">const</span> <span class="property">skills</span> <span class="keyword">=</span> {
+            </h2>
+            <p><span class="property">server:</span> [<span class="string">"C#"</span>, <span
+                    class="string">"Node.js"</span>, <span class="string">"PHP Laravel"</span>, <span
+                    class="string">"Python"</span>, <span class="string">"C"</span>],</p>
+            <p><span class="property">client:</span> [<span class="string">"HTML5"</span>, <span
+                    class="string">"CSS3"</span>, <span class="string">"JavaScript"</span>, <span
+                    class="string">"Angular 13"</span>, <span class="string">"ASP.NET"</span>, <span
+                    class="string">"jQuery"</span>, <span class="string">"Bootstrap"</span>],</p>
+            <p><span class="property">technologies:</span> [<span class="string">"Web Services (WCF, Web API)"</span>],
+            </p>
+            <p><span class="property">databases:</span> [<span class="string">"MySQL"</span>, <span
+                    class="string">"MongoDB"</span>, <span class="string">"SQL Server"</span>],</p>
+            <p><span class="property">devEnvironments:</span> [<span class="string">"Visual Studio"</span>, <span
+                    class="string">"Visual Studio Code"</span>, <span class="string">"WebStorm"</span>, <span
+                    class="string">"PhpStorm"</span>]</p>
+            <h2>};</h2>
+        </section>
+
+        <section id="languages" class="section highlight">
+            <h2><span class="keyword">const</span> <span class="property">languages</span> <span
+                    class="keyword">=</span> {</h2>
+            <p><span class="property">Hebrew:</span> <span class="string">"Native"</span>,</p>
+            <p><span class="property">English:</span> <span class="string">"Professional Proficiency"</span></p>
+            <h2>};</h2>
+        </section>
+    </div>
+
+    <button class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Existing animations...
+            anime.timeline({
+                easing: 'easeOutExpo',
+                duration: 750
+            })
+                .add({
+                    targets: '.section',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    delay: anime.stagger(200)
+                });
+
+            // Typing animation for the name
+            const nameElement = document.querySelector('h1');
+            const nameTxt = nameElement.textContent;
+            nameElement.textContent = '';
+            nameElement.classList.add('typing');
+            let i = 0;
+            const typeWriter = () => {
+                if (i < nameTxt.length) {
+                    nameElement.textContent += nameTxt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    nameElement.classList.remove('typing');
+                }
+            };
+            typeWriter();
+
+            // Hover animation for list items
+            const listItems = document.querySelectorAll('li');
+            listItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    anime({
+                        targets: item,
+                        translateX: 5,
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+                item.addEventListener('mouseleave', () => {
+                    anime({
+                        targets: item,
+                        translateX: 0,
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+            });
+
+            // Back to Top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Smooth scrolling for navbar links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
